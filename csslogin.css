@@ -1,0 +1,144 @@
+        /* Globalne style */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #2c3e50, #d400ff);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .kontener-logowania {
+            position: relative;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            transform: scale(0);
+            animation: skalujWg 1s forwards;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Wszystko wyśrodkowane */
+        }
+
+        /* Animacje */
+        @keyframes skalujWg {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .kontener-logowania h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #d400ff;
+            animation: pojawienieSię 2s ease-in-out;
+        }
+
+        @keyframes pojawienieSię {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Pola wejściowe */
+        .pole-wejściowe {
+            width: 100%;
+            max-width: 300px; /* Zapewnia maksymalną szerokość */
+            margin: 10px 0;
+            padding: 15px;
+            background: #333;
+            border: 2px solid #444;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #fff;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .pole-wejściowe:focus {
+            border: 2px solid #d400ff;
+        }
+
+        /* Przycisk wysyłania */
+        .przycisk-submit {
+            width: 100%;
+            max-width: 300px; /* Taka sama szerokość jak pola wejściowe */
+            padding: 15px;
+            background: #d400ff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .przycisk-submit:hover {
+            background: #a500cc;
+        }
+
+        /* Link do zapomnianego hasła i rejestracji */
+        .zapomniane-hasło, .link-rejestracji {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .zapomniane-hasło a, .link-rejestracji a {
+            color: #d400ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .zapomniane-hasło a:hover, .link-rejestracji a:hover {
+            color: #fff;
+        }
+
+        /* Animacja formularza */
+        .pole-formularza {
+            position: relative;
+            opacity: 0;
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Stopka */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Kontener do przełączania między logowaniem a rejestracją */
+        .kontener-przełączania {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }

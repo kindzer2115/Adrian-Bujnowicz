@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #2c3e50, #d400ff);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.registration-container {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    animation: scaleIn 1s forwards;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.registration-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #d400ff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-field {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    position: relative;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    background: #333;
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-field:focus {
+    border: 2px solid #d400ff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #d400ff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background: #a500cc;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #d400ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #fff;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+
+.input-field, .submit-btn {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.input-field, .submit-btn, .login-link {
+    transition: all 0.3s ease;
+}
+
+
+.input-field:focus, .submit-btn:hover {
+    transform: scale(1.05);
+}
+

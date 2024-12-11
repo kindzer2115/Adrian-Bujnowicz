@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+    <div class="kontener-menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Główna</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="about.html">O nas</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="login.html">Wyloguj</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="formularz-kontaktowy">
+        <h2>Kontakt</h2>
+
+        <input type="text" class="pole-tekstowe" placeholder="Twoje Imię" id="imie">
+        <input type="email" class="pole-tekstowe" placeholder="Twój Email" id="email">
+        <textarea class="pole-wiadomosci" placeholder="Twoja Wiadomość" id="wiadomosc"></textarea>
+
+        <button class="przycisk-wyslij" onclick="wyslijFormularz()">Wyślij Wiadomość</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Adrian Bujnowicz</p>
+    </footer>
+
+    <script>
+        function wyslijFormularz() {
+            const imie = document.getElementById('imie').value;
+            const email = document.getElementById('email').value;
+            const wiadomosc = document.getElementById('wiadomosc').value;
+
+            if (imie && email && wiadomosc) {
+                alert(`Dziękujemy za kontakt, ${imie}! Skontaktujemy się z Tobą wkrótce.`);
+            } else {
+                alert('Proszę wypełnić wszystkie pola.');
+            }
+        }
+
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('otwarte'); 
+            menu.classList.toggle('otwarte'); 
+        });
+
+        const polaTekstowe = document.querySelectorAll('.pole-tekstowe, .pole-wiadomosci');
+        polaTekstowe.forEach(pole => {
+            pole.addEventListener('focus', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.borderColor = '#d400ff';
+            });
+            pole.addEventListener('blur', function() {
+                this.style.transform = 'scale(1)';
+                this.style.borderColor = '#444';
+            });
+        });
+    </script>
+
+</body>
+</html>

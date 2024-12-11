@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Główna</title>
+    <link rel="stylesheet" href="cssindex.css">
+</head>
+<body>
+    <div class="kontener-menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Główna</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="about.html">O nas</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="login.html">Wyloguj</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="kontener-wyszukiwania">
+        <input type="text" placeholder="Wpisz nazwę gracza" id="nazwa-gracza">
+        <select id="serwer">
+            <option value="BR">BR — Brazylia</option>
+            <option value="EUNE">EUNE — Europa Północno-Wschodnia</option>
+            <option value="EUW">EUW — Europa Zachodnia</option>
+            <option value="LAN">LAN — Ameryka Łacińska Północna</option>
+            <option value="LAS">LAS — Ameryka Łacińska Południowa</option>
+            <option value="NA">NA — Ameryka Północna</option>
+            <option value="OCE">OCE — Oceania</option>
+            <option value="RU">RU — Rosja</option>
+        </select>
+        <button onclick="wyszukajGracza()">Szukaj</button>
+    </div>
+
+    <div class="sekcja-stats">
+        <h2>Statystyki Gracza</h2>
+        <div class="siato-stats">
+            <div class="przedmiot-statystyki">
+                <h3>Gry rozegrane</h3>
+                <p>120</p>
+            </div>
+            <div class="przedmiot-statystyki">
+                <h3>Wskaźnik wygranych</h3>
+                <p>65%</p>
+            </div>
+            <div class="przedmiot-statystyki">
+                <h3>Średni K/D/A</h3>
+                <p>7.5 / 2.3 / 8.0</p>
+            </div>
+            <div class="przedmiot-statystyki">
+                <h3>Ranga</h3>
+                <p>Diament II</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="najnowsze-wyszukiwania">
+        <h2>Najnowsze wyszukiwania</h2>
+        <ul>
+            <li><a href="#">Gracz1 (EUW)</a></li>
+            <li><a href="#">Gracz2 (NA)</a></li>
+            <li><a href="#">Gracz3 (EUNE)</a></li>
+        </ul>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const menu = document.querySelector('.menu');
+
+      hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('otwarte'); 
+      menu.classList.toggle('otwarte'); 
+});
+
+    </script>
+</body>
+</html>
