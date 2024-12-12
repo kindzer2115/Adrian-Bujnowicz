@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teks</title>
+    <link rel="stylesheet" href="tekst.css">
+</head>
+<body>
+    <div class="kontener-menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Główna</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="about.html">O nas</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="tekst.html">O grze</a></li>
+                <li><a href="tournament.html">Turnieje</a></li>
+                <li><a href="login.html">Wyloguj</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>O grze</h1>
+        <p>Mecze w grze League of Legends odbywają się na mapie Summoner’s Rift. Głównym celem rozgrywki, w której uczestniczą dwie drużyny składające się z pięciu graczy, jest zniszczenie struktury zwanej Nexusem w bazie przeciwnika. W pobliżu Nexusa znajduje się fontanna, z której bohaterowie rozpoczynają grę oraz do której wracają, aby uzupełnić punkty życia, manę i nabyć przedmioty w sklepie.</p>
+
+        <div class="image-text">
+            <img src="obraz2.gif" alt="Obrazek 1">
+            <p>Mapa składa się z trzech głównych ścieżek, prowadzących do bazy przeciwnika. Każda aleja jest chroniona przez trzy wieże obronne oraz inhibitor, a w bezpośrednim sąsiedztwie Nexusa znajdują się dodatkowe dwie wieże. Dżungla, obszar pomiędzy alejami, zawiera neutralne potwory oraz rośliny. Potwory, takie jak smoki żywiołów, Starszy Smok oraz Baron Nashor, są potężne i mają szczególne znaczenie w grze. Po ich pokonaniu drużyna otrzymuje znaczące wzmocnienie.</p>
+        </div>
+
+        <div class="image-text">
+            <p>W grze wyróżnia się pięć głównych pozycji, które tworzą zalecaną kompozycję drużyny: górną aleję, dżunglę, środkową aleję, dolną aleję oraz wsparcie. Każdy gracz wybiera bohatera przypisanego do jednej z pozycji, a podczas rozgrywki postać zdobywa doświadczenie, które pozwala awansować na wyższe poziomy i rozwijać umiejętności. Gracze zdobywają również złoto, które można przeznaczyć na zakup przedmiotów zwiększających statystyki postaci[11]. Udostępniono ponad 160 bohaterów, z których każdy ma wyjątkowy zestaw umiejętności</p>
+            <img src="obraz3.gif" alt="Obrazek 2">
+        </div>
+
+        <p>W 2013 r. wprowadzono tryb All Random All Mid (ARAM) rozgrywany na mapie Howling Abyss, która zawiera tylko jedną aleję. W przeciwieństwie do rozgrywki na Summoner’s Rift, gracz otrzymuje wyłącznie losową postać spośród dostępnych dla niego. Celem nadal jest zniszczenie Nexusa drużyny przeciwnej, jednak rozgrywka koncentruje się głównie na walce. Aby bohater mógł zakupić przedmioty, musi zginąć, ponieważ powrót do bazy jest wyłączony[13]. W przedsezonie 2022 r. zmodyfikowano mapę: wprowadzono hexbramy umożliwiające szybszy powrót, wypełniono pustą przestrzeń przy prawej krawędzi alei, a wieże które ulegną zniszczeniu, przewracają się, tworząc nową strukturę[14]. Część zmian została wycofana po krytyce ze strony graczy</p>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('otwarte');
+            menu.classList.toggle('otwarte');
+        });
+    </script>
+</body>
+</html>

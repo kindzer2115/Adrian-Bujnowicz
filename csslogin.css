@@ -1,4 +1,4 @@
-        /* Globalne style */
+
         body {
             margin: 0;
             padding: 0;
@@ -24,10 +24,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; /* Wszystko wyśrodkowane */
+            align-items: center; 
         }
 
-        /* Animacje */
+      
         @keyframes skalujWg {
             0% {
                 transform: scale(0);
@@ -55,10 +55,10 @@
             }
         }
 
-        /* Pola wejściowe */
+        
         .pole-wejściowe {
             width: 100%;
-            max-width: 300px; /* Zapewnia maksymalną szerokość */
+            max-width: 300px; 
             margin: 10px 0;
             padding: 15px;
             background: #333;
@@ -74,10 +74,10 @@
             border: 2px solid #d400ff;
         }
 
-        /* Przycisk wysyłania */
+       
         .przycisk-submit {
             width: 100%;
-            max-width: 300px; /* Taka sama szerokość jak pola wejściowe */
+            max-width: 300px; 
             padding: 15px;
             background: #d400ff;
             border: none;
@@ -93,7 +93,7 @@
             background: #a500cc;
         }
 
-        /* Link do zapomnianego hasła i rejestracji */
+        
         .zapomniane-hasło, .link-rejestracji {
             text-align: center;
             margin-top: 15px;
@@ -110,7 +110,7 @@
             color: #fff;
         }
 
-        /* Animacja formularza */
+        
         .pole-formularza {
             position: relative;
             opacity: 0;
@@ -127,7 +127,6 @@
             }
         }
 
-        /* Stopka */
         footer {
             position: absolute;
             bottom: 20px;
@@ -136,7 +135,7 @@
             font-size: 0.9rem;
         }
 
-        /* Kontener do przełączania między logowaniem a rejestracją */
+        
         .kontener-przełączania {
             display: flex;
             justify-content: space-between;
